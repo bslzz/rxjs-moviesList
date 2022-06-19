@@ -1,0 +1,6 @@
+<ul *ngIf="movie">
+  <img [src]="movie.image" alt="movieImage" />
+  <li>Movie: {{ movie.name | titlecase }}</li>
+  <li>Genre: {{ movie.genre | titlecase }}</li>
+  <li>Release Year: {{ movie.releaseYear }}</li>
+</ul>

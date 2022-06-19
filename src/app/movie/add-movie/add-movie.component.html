@@ -1,0 +1,38 @@
+<form [formGroup]="movieForm" (ngSubmit)="addMovie()">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="title" formControlName="name" />
+  </div>
+  <div class="form-group">
+    <label for="genre">Genre</label>
+    <input
+      type="text"
+      class="form-control"
+      id="title"
+      formControlName="genre"
+    />
+  </div>
+  <div class="form-group">
+    <label for="image">Image URL</label>
+    <input
+      type="text"
+      class="form-control"
+      id="title"
+      formControlName="image"
+    />
+  </div>
+  <div class="form-group">
+    <label for="releaseYear">Release year</label>
+    <input
+      type="text"
+      class="form-control"
+      id="title"
+      formControlName="releaseYear"
+    />
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary" [disabled]="!movieForm.valid">
+      Submit
+    </button>
+  </div>
+</form>

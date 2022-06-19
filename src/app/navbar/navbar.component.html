@@ -1,0 +1,10 @@
+<nav>
+  <a routerLink="/movies"><h1>Home</h1></a>
+  <h2>{{ title$ | async | titlecase }}</h2>
+  <a
+    *ngIf="!router.url.includes('movies/add')"
+    class="addMovie"
+    routerLink="movies/add"
+    ><button>Add</button></a
+  >
+</nav>
